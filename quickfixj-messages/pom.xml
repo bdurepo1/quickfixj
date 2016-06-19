@@ -15,6 +15,7 @@
 	<url>http://www.quickfixj.org</url>
 
 	<modules>
+        <module>quickfixj-messages-coinbase</module>
 		<module>quickfixj-messages-fix40</module>
 		<module>quickfixj-messages-fix41</module>
 		<module>quickfixj-messages-fix42</module>

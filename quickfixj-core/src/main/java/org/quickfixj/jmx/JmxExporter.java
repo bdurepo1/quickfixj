@@ -17,19 +17,13 @@
 
 package org.quickfixj.jmx;
 
-import javax.management.InstanceAlreadyExistsException;
-import javax.management.InstanceNotFoundException;
-import javax.management.JMException;
-import javax.management.MBeanServer;
-import javax.management.MBeanServerFactory;
-import javax.management.ObjectName;
-
 import org.quickfixj.jmx.mbean.connector.ConnectorJmxExporter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import quickfix.Connector;
 import quickfix.mina.SessionConnector;
+
+import javax.management.*;
 
 public class JmxExporter {
 
@@ -83,6 +77,7 @@ public class JmxExporter {
      * @see #REGISTRATION_FAIL_ON_EXISTING
      * @see #REGISTRATION_IGNORE_EXISTING
      * @see #REGISTRATION_REPLACE_EXISTING
+     * @param registrationBehaviour description here
      */
     public void setRegistrationBehavior(int registrationBehaviour) {
         this.registrationBehaviour = registrationBehaviour;
@@ -108,7 +103,7 @@ public class JmxExporter {
      * Register a connector with JMX
      *
      * @deprecated use register instead
-     * @param connector
+     * @param connector description here
      */
     public void export(Connector connector) {
         register(connector);
@@ -132,9 +127,9 @@ public class JmxExporter {
      * @see #REGISTRATION_FAIL_ON_EXISTING
      * @see #REGISTRATION_IGNORE_EXISTING
      * @see #REGISTRATION_REPLACE_EXISTING
-     * @param mbean
-     * @param objectName
-     * @throws JMException
+     * @param mbean description here
+     * @param objectName description here
+     * @throws JMException description here
      */
     public void registerMBean(Object mbean, ObjectName objectName) throws JMException {
         try {

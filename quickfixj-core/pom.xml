@@ -130,6 +130,9 @@
 			<resource>
 				<directory>../quickfixj-messages/quickfixj-messages-fix50sp2/src/main/resources</directory>
 			</resource>
+			<resource>
+				<directory>../quickfixj-messages/quickfixj-messages-coinbase/src/main/resources</directory>
+			</resource>
 		</resources>
 
 		<testResources>
@@ -162,6 +165,9 @@
 			</testResource>
 			<testResource>
 				<directory>../quickfixj-messages/quickfixj-messages-fix40/src/main/resources</directory>
+			</testResource>
+			<testResource>
+				<directory>../quickfixj-messages/quickfixj-messages-coinbase/src/main/resources</directory>
 			</testResource>
 			<testResource>
 				<directory>src/main/resources</directory>
@@ -282,6 +288,18 @@
 							<decimal>${generator.decimal}</decimal>
 						</configuration>
 					</execution>
+					<execution>
+						<id>coinbase</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<dictFile>../quickfixj-messages/quickfixj-messages-coinbase/src/main/resources/coinbase.xml</dictFile>
+							<packaging>quickfix.coinbase</packaging>
+							<fieldPackage>quickfix.field</fieldPackage>
+							<decimal>${generator.decimal}</decimal>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
@@ -334,6 +352,7 @@
 							quickfix.fix50sp1;resolution:=optional,
 							quickfix.fix50sp2;resolution:=optional,
 							quickfix.fixt11;resolution:=optional,
+							quickfix.coinbase;resolution:=optional,
 							<!-- add the required imports -->
 							quickfix,quickfix.field,*
 						</Import-Package>

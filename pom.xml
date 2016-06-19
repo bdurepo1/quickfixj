@@ -201,7 +201,7 @@
 					<extensions>true</extensions>
 					<configuration>
 						<serverId>ossrh</serverId>
-						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+						<nexusUrl>https://localhost:8081/</nexusUrl>
 						<autoReleaseAfterClose>true</autoReleaseAfterClose>
 					</configuration>
 				</plugin>
@@ -275,12 +275,12 @@
 
 	<distributionManagement>
 		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>durepo-snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/durepo-snapshots/</url>
 		</snapshotRepository>
 		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<id>durepo-release</id>
+			<url>http://localhost:8081/nexus/content/repositories/durepo-release</url>
 		</repository>
 	</distributionManagement>
 
