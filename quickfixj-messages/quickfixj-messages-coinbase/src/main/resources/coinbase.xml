@@ -87,6 +87,7 @@
             <field name="OrdType" required="N"/>
             <field name="Price" required="N"/>
             <field name="LastShares" required="N"/>
+            <field name="LeavesQty" required="Y"/>
             <field name="TransactTime" required="Y"/>
             <field name="Text" required="N"/>
         </message>
@@ -204,6 +205,7 @@
             <value enum="D" description="ORDER_CHANGED"/>
             <value enum="I" description="ORDER_STATUS"/>
         </field>
+        <field number="151" name="LeavesQty" type="QTY"/>
         <field number="262" name="MDReqID" type="STRING"/>
         <field number="263" name="SubscriptionRequestType" type="CHAR">
             <value enum="0" description="SNAPSHOT"/>
