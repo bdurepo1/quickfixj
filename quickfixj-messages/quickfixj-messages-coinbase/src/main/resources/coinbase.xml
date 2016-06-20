@@ -117,7 +117,7 @@
         <field number="21" name="HandlInst" type="CHAR">
             <value enum="1" description="AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION"/>
         </field>
-        <field number="32" name="LastShares" type="INT"/>
+        <field number="32" name="LastShares" type="QTY"/>
         <field number="34" name="MsgSeqNum" type="INT"/>
         <field number="35" name="MsgType" type="STRING">
             <value enum="0" description="HEARTBEAT"/>
